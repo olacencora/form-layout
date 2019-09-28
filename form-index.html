@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="form-style.css" />
   </head>
   <body>
+    <!-- navigation -->
     <nav class="top-bar">
       <ul>
         <li class="bar-item">home</li>
@@ -22,6 +23,7 @@
         <li class="bar-item">contact</li>
       </ul>
     </nav>
+    <!-- form section -->
     <div class="form-box">
       <h1>Welcome to this form</h1>
       <p>
@@ -37,9 +39,11 @@
           id="password"
           placeholder="password"
         />
-        <button>create account</button>
-        <label for="consent"></label>
-        <input type="checkbox" name="consent" id="consent" />
+        <button class="btn">create account</button>
+        <div class="cinsent-box">
+          <label for="consent">i igree whatever you want me to agree</label>
+          <input type="checkbox" name="consent" id="consent" />
+        </div>
       </form>
     </div>
     <script src="form-main.js"></script>
