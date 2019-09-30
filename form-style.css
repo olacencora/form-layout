@@ -78,6 +78,23 @@ input {
   margin: 20px auto;
 }
 
+/* agreement  */
+
+.consent-box {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+#consent {
+  order: 1;
+  width: 10%;
+}
+
 label {
   color: rgb(112, 112, 112);
+  order: 2;
+  width: 90%;
 }
