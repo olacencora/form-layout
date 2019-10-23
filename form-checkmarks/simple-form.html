@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>simple form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,700,900&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="simple-form-style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <main class="content-box">
+        <h1 class="wrapper-main-title">
+          Wypełnij formularz aby otrzymac kupon rabatowy
+        </h1>
+        <section class="form">
+          <label for="" class="form-label">
+            Imię i nazwisko
+            <input
+              type="text"
+              class="form-input"
+              name="name"
+              placeholder="Jan Kowalski"
+              required
+            />
+          </label>
+
+          <label for="" class="form-label">
+            Adres e-mail
+            <input
+              type="email"
+              class="form-input"
+              name="email"
+              placeholder="jan.kowalski@example.com"
+              required
+            />
+          </label>
+          <div class="agrr-section">
+            <label class="form-label checkbox">
+              <input type="hidden" value="true" name="zgoda1" />
+              <input
+                type="checkbox"
+                class="checkbox-input checkAll"
+                name="zgoda1"
+                required
+              />
+              <span>*</span>
+              Wyrażam zgodę na ... lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Neque, suscipit vero illum earum iste et animi
+              facere. Debitis, iure? Recusandae, blanditiis! Labore illo rem
+              laudantium qui, possimus consequuntur incidunt obcaecati!
+              <span class="checkbox-checkmark"></span>
+              <span class="alertBox"></span>
+            </label>
+            <label class="form-label checkbox">
+              <input type="hidden" value="true" name="zgoda2" />
+              <input
+                type="checkbox"
+                class="checkbox-input makeRed"
+                name="zgoda2"
+                required
+              />
+              <span>*</span>
+              Wyrażam zgodę na ... lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Neque, suscipit vero illum earum iste et animi
+              facere. Debitis, iure? Recusandae, blanditiis! Labore illo rem
+              laudantium qui, possimus consequuntur incidunt obcaecati!
+              <span class="checkbox-checkmark"></span>
+              <span class="alertBox"></span>
+            </label>
+            <label class="form-label checkbox">
+              <input type="hidden" value="true" name="zgoda3" />
+              <input
+                type="checkbox"
+                class="checkbox-input makeRed"
+                name="zgoda3"
+                required
+              />
+              Wyrażam zgodę na ... lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Neque, suscipit vero illum earum iste et animi
+              facere. Debitis, iure? Recusandae, blanditiis! Labore illo rem
+              laudantium qui, possimus consequuntur incidunt obcaecati!
+              <span class="checkbox-checkmark"></span>
+            </label>
+          </div>
+
+          <div class="submit-box">
+            <input
+              class="btn-submit"
+              type="submit"
+              name="submit"
+              id="submit"
+              value="Zapisuję się!"
+            />
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="text/javascript">
+      // <![CDATA[
+
+      let allAgrrRequired = document.querySelectorAll(".makeRed");
+
+      function checkboxesRed() {
+        for (let i = 0; i < allAgrrRequired.length; i++) {
+          if (allAgrrRequired[i].checked == false) {
+            allAgrrRequired[i].parentElement.getElementsByClassName(
+              "alertBox"
+            )[0].style.display = "block";
+          } else {
+            allAgrrRequired[i].parentElement.getElementsByClassName(
+              "alertBox"
+            )[0].style.display = "none";
+          }
+        }
+      }
+
+      let submit = document.querySelector(".btn-submit");
+
+      submit.addEventListener("click", () => {
+        checkboxesRed();
+      });
+
+      // ]]>
+    </script>
+  </body>
+</html>

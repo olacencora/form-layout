@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  outline: none;
+  color: #fff;
+}
+
+body {
+  background-color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  min-width: 280px;
+  height: 700px;
+  margin: 0px auto;
+  background-color: #46a39d;
+  position: relative;
+  border-radius: 10px;
+}
+
+.content-box {
+  display: block;
+  width: auto;
+  height: 100%;
+  padding: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrapper-main-title {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.wrapper-main-title-sub {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 25px;
+  z-index: 5;
+  position: relative;
+}
+
+.form-label {
+  display: inline-block;
+  width: 90%;
+  font-size: 20px;
+  margin: 7px;
+}
+
+.form-input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 5px;
+}
+
+.form-input::placeholder {
+  color: #fff;
+  font-size: 15px;
+}
+
+input[type="text"] {
+  color: white;
+}
+/* checkbox section  */
+
+.checkbox {
+  position: relative;
+  padding-left: 35px;
+  font-size: 10px;
+  margin-top: 25px;
+}
+
+.checkbox-checkmark {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.checkbox-checkmark:after {
+  content: "";
+  left: 8px;
+  top: 5px;
+  position: absolute;
+  width: 5px;
+  height: 9px;
+  border: solid #039470;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.alertBox {
+  width: 27px;
+  height: 27px;
+  display: none;
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  border: 1px solid rgb(211, 52, 52);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.checkbox-input:checked ~ .checkbox-checkmark:after {
+  display: block;
+  opacity: 1;
+}
+
+.checkbox-input:checked ~ .checkbox-checkmark {
+  background-color: #fff;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.content-box {
+  width: 95%;
+  margin-left: 30px;
+}
+
+.agrr-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper-tekst {
+  font-size: 10px;
+  padding-bottom: 7px;
+}
+.submit-box {
+  display: flex;
+  justify-content: center;
+}
+.btn-submit {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  background-color: #308a84;
+  border: none;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 13px;
+}
+.btn-submit:hover {
+  background-color: #266e69;
+}
+.all {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 883px) {
+  .content-box {
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .form-input {
+    padding: 10px;
+    margin-top: 3px;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .wrapper-main-title-sub {
+    font-size: 28px;
+  }
+  .form {
+    padding: 15px;
+  }
+  .wrapper-submit {
+    padding: 10px;
+
+    margin: 0 auto;
+  }
+  .checkbox-heckmark {
+    width: 20px;
+    height: 20px;
+  }
+  .checkbox-heckmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .wrapper-main-title {
+    margin-bottom: 20px;
+  }
+  .form-label {
+    font-size: 14px;
+    margin: 5px;
+  }
+  .form {
+    padding: 7px;
+  }
+
+  .content-box {
+    padding: 15px;
+    margin: 15px;
+  }
+  .checkbox-checkmark {
+    width: 15px;
+    height: 15px;
+  }
+
+  .checkbox {
+    padding-left: 20px;
+  }
+  .checkbox-checkmark {
+    top: 4px;
+    left: 0px;
+  }
+  .checkbox-checkmark:after {
+    left: 2px;
+    top: 0px;
+    width: 5px;
+    height: 7px;
+  }
+  .checkbox {
+    margin-top: 10px;
+  }
+  .form {
+    padding: 0px;
+  }
+  .form-label {
+    font-size: 11px;
+  }
+  .wrapper-tekst {
+    font-size: 9px;
+    padding-bottom: 3px;
+  }
+  .wrapper-container {
+    width: 95%;
+    margin-left: 5px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .form-label {
+    font-size: 10px;
+  }
+  .checkbox {
+    margin-top: 2px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .form-label {
+    font-size: 8px;
+  }
+  .checkbox {
+    margin-top: 2px;
+  }
+}
